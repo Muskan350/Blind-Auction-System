@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureBlind Auction</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>🏆 SecureBlind Auction</h1>
+<h2 id="timer">05:00</h2>
+<p id="bidCount">Total Secret Bids: 0</p>
+
+<div class="card">
+<input id="name" placeholder="Your Name">
+<input id="bid" type="number" placeholder="Bid Amount">
+<button onclick="submitBid()">Submit Secret Bid</button>
+<p id="message"></p>
+</div>
+
+<div class="card">
+<h2>Admin Panel</h2>
+<input id="adminPassword" type="password" placeholder="Admin Password">
+<button onclick="revealWinner()">End Auction & Reveal Winner</button>
+<button onclick="downloadPDF()">Download Result PDF</button>
+<div id="dashboard"></div>
+<div id="result"></div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
